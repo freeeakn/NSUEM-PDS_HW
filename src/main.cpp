@@ -6,6 +6,8 @@ int main() {
   int size;
 
   while (true) {
+    system("clear"); //! Очистка терминала для Unix/Linux
+    // system("cls"); //! Очистка терминала для Windows
     view.showMenu();
     std::cin >> choice;
 
@@ -39,6 +41,8 @@ int main() {
       return 0;
     } else {
       std::cout << "Недопустимый выбор" << std::endl;
+      std::cin.ignore(); // Игнорирование оставшегося ввода
+      std::cin.get(); // Ожидание нажатия клавиши
     }
   }
 
