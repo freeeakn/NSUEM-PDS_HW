@@ -45,8 +45,8 @@ PDS_HW
 ▎Установка
 
 1. Клонируйте репозиторий:
-      git clone https://github.com/ваш_пользователь/ваш_репозиторий.git
-   cd ваш_репозиторий
+      git clone https://github.com/freeeakn/NSUEM-PDS_HW
+   cd NSUEM-PDS_HW
    
 
 2. Скомпилируйте проект:
