@@ -1,5 +1,7 @@
 # NSUEM-PDS_HW
 
+* Русская версия документации README_RUS.md
+
 ## Lecture 1
 
 ### Project Description

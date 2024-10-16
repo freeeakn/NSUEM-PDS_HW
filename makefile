@@ -1,20 +1,20 @@
-.PHONY: all
+.PHONY: all lectureOne lectureSecond lectureThird
 OS = $(shell uname)
 
 ifeq ($(OS),Linux)
-	FILENAME = lectureOne lectureSecond
+	FILENAME = lectureOne lectureSecond lectureThird
 else
 	FILENAME = *.exe
 endif
 ifeq ($(OS),Darwin)
-	FILENAME = lectureOne lectureSecond
+	FILENAME = lectureOne lectureSecond lectureThird
 endif
 
 CC = g++
 FORMAT = clang-format -i
 FLAGS = -std=c++20 -Wall -Werror -Wextra
 
-all: hello lint lectureOne lectureSecond clean
+all: hello lint lectureOne lectureSecond lectureThird clean
 	@echo "GoodBye..."
 
 lectureOne:
@@ -24,6 +24,10 @@ lectureOne:
 lectureSecond:
 	$(CC) $(FLAGS) src/lecture_2/main.cpp -o lectureSecond
 	./lectureSecond
+
+lectureThird:
+	$(CC) $(FLAGS) src/lecture_3/main.cpp -o lectureThird
+	./lectureThird
 
 # ==============================
 # UTILS
