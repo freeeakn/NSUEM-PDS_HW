@@ -2,90 +2,90 @@
 
 ## Lecture 1
 
-▎Описание проекта
+### Project Description
 
-Этот репозиторий содержит реализацию абстрактных структур данных на языке C++: стек, очередь, список и множество. Все структуры данных реализованы на основе массивов и поддерживают основные операции.
+This repository contains the implementation of abstract data structures in C++: stack, queue, list, and set. All data structures are implemented using arrays and support basic operations.
 
-▎Стек
+### Stack
 
-Стек реализован на основе массива и включает следующие операции:
+The stack is implemented using an array and includes the following operations:
 
-- push(value) — добавляет элемент на вершину стека.
-- pop() — удаляет элемент с вершины стека.
-- last() — возвращает элемент на вершине стека без его удаления.
-- isEmpty() — проверяет, пуст ли стек.
-- print() — выводит содержимое стека.
+* `push(value)` - adds an element to the top of the stack.
+* `pop()` - removes the element from the top of the stack.
+* `last()` - returns the element at the top of the stack without removing it.
+* `isEmpty()` - checks if the stack is empty.
+* `print()` - prints the contents of the stack.
 
-▎Очередь
+### Queue
 
-Очередь реализована на основе массива с использованием сдвига элементов. Поддерживаемые операции:
+The queue is implemented using an array with element shifting. Supported operations:
 
-- enqueue(value) — добавляет элемент в конец очереди.
-- dequeue() — удаляет элемент из начала очереди.
-- first() — возвращает первый элемент очереди без его удаления.
-- isEmpty() — проверяет, пуста ли очередь.
-- print() — выводит содержимое очереди.
+* `enqueue(value)` - adds an element to the end of the queue.
+* `dequeue()` - removes the element from the beginning of the queue.
+* `first()` - returns the first element of the queue without removing it.
+* `isEmpty()` - checks if the queue is empty.
+* `print()` - prints the contents of the queue.
 
-▎Список
+### List
 
-Список реализован на основе массива и поддерживает операции добавления и удаления элементов с учетом сдвига:
+The list is implemented using an array and supports adding and removing elements with shifting:
 
-- add(value) — добавляет элемент в список.
-- remove(index) — удаляет элемент по индексу.
-- print() — выводит содержимое списка.
+* `add(value)` - adds an element to the list.
+* `remove(index)` - removes the element at the specified index.
+* `print()` - prints the contents of the list.
 
-▎Множество
+### Set
 
-Множество реализовано на основе массива с пометкой элементов. Основные операции:
+The set is implemented using an array with element marking. Basic operations:
 
-- add(value) — добавляет элемент в множество (если его еще нет).
-- remove(value) — удаляет элемент из множества (если он существует).
-- contains(value) — проверяет, содержится ли элемент в множестве.
-- print() — выводит содержимое множества.
+* `add(value)` - adds an element to the set (if it doesn't exist).
+* `remove(value)` - removes the element from the set (if it exists).
+* `contains(value)` - checks if the element is in the set.
+* `print()` - prints the contents of the set.
 
-## lecture 2
+## Lecture 2
 
-- `linear_search.h`: реализация последовательного поиска элементов в массиве.
-- `binary_search.h`: реализация двоичного поиска элементов в массиве.
-- `search_comparison.h`: реализация сравнения сложности алгоритмов поиска.
-- `main.cpp`: основная программа, которая демонстрирует работу алгоритмов поиска.
+* `linear_search.h`: implementation of linear search in an array.
+* `binary_search.h`: implementation of binary search in an array.
+* `search_comparison.h`: implementation of search algorithm comparison.
+* `main.cpp`: main program that demonstrates the search algorithms.
 
-## Описание алгоритмов
+## Algorithm Description
 
-- **Последовательный поиск**: этот алгоритм работает путем последовательного просмотра элементов массива и сравнения каждого элемента с искомым значением. Если элемент найден, алгоритм возвращает индекс элемента.
-- **Двоичный поиск**: этот алгоритм работает путем деления массива на две части и сравнения среднего элемента с искомым значением. Если средний элемент равен искомому значению, алгоритм возвращает индекс элемента. Если средний элемент меньше искомого значения, алгоритм повторяется для правой части массива. Если средний элемент больше искомого значения, алгоритм повторяется для левой части массива.
+* **Linear Search**: this algorithm works by sequentially scanning the elements of the array and comparing each element with the target value. If the element is found, the algorithm returns the index of the element.
+* **Binary Search**: this algorithm works by dividing the array into two parts and comparing the middle element with the target value. If the middle element is equal to the target value, the algorithm returns the index of the element. If the middle element is less than the target value, the algorithm repeats for the right part of the array. If the middle element is greater than the target value, the algorithm repeats for the left part of the array.
 
-## Установка
+## Installation
 
-1. Клонируйте репозиторий:
+1. Clone the repository:
 
    ```bash
-   git clone <https://github.com/freeeakn/NSUEM-PDS_HW>
+   git clone https://github.com/freeeakn/NSUEM-PDS_HW
    cd NSUEM-PDS_HW
    ```
 
-2. Скомпилируйте проект:
+2. Compile the project:
 
       ```bash
       make
       ```
 
-▎Использование
+## Usage
 
-Пример использования каждой структуры данных можно найти в файле main.cpp.
+Example usage of each data structure can be found in the `main.cpp` file.
 
-## Автор
+## Author
 
-Программа была разработана студентом третьего курса Печёнкиным Артуром в рамках курса по дисциплине: "Программирование дискретных структур", на языке C++.
+This program was developed by Arthur Pechenkin, a third-year student, as part of the "Programming of Discrete Structures" course, in C++.
 
-Контактная информация:
+Contact information:
 
-- Артур [@machinee](https://github.com/freeeakn)
+* Arthur [@machinee](https://github.com/freeeakn)
 
-## Лицензия
+## License
 
-Этот проект лицензирован под лицензией MIT. Пожалуйста, ознакомьтесь с файлом LICENSE для получения дополнительной информации.
+This project is licensed under the MIT License. Please see the LICENSE file for more information.
 
 ---
 
-Примечание: Убедитесь, что у вас установлен компилятор C++ (например, g++) для компиляции и запуска проекта.
+Note: Make sure you have a C++ compiler (e.g., g++) installed to compile and run the project.
