@@ -1,15 +1,16 @@
 package main
+
 import (
 	"fmt"
-	"lectureFourth/SeveralRecursiveFunctions"
+	"lectureFourth/RecursiveFunc"
 )
 
 func main() {
-  fmt.Printf("Sum of digits: %d\n", SeveralRecursiveFunctions.SumDigitsNumber(12345))
+	fmt.Printf("Sum of digits: %d\n", RecursiveFunc.SumDigitsNumber(12345))
 
-  fmt.Printf("Sum from 0 to 10: %d\n", SeveralRecursiveFunctions.SumFromZeroToNumber(10))
+	fmt.Printf("Sum from 0 to 10: %d\n", RecursiveFunc.SumFromZeroToNumber(10))
 
-  fmt.Printf("Fibonacci number at position 10: %d\n", SeveralRecursiveFunctions.Fibonacci(10))
+	fmt.Printf("Fibonacci number at position 10: %d\n", RecursiveFunc.Fibonacci(10))
 
-  fmt.Printf("Factorial of 5: %d\n", SeveralRecursiveFunctions.Factorial(5))
+	fmt.Printf("Factorial of 5: %d\n", RecursiveFunc.Factorial(5))
 }

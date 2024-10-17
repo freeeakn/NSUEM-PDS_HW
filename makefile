@@ -26,7 +26,7 @@ lectureSecond:
 	./lectureSecond
 
 lectureThird:
-	$(CC) $(FLAGS) src/lecture_3/main.cpp -o lectureThird
+	$(CC) $(FLAGS) src/cpp/lecture_3/main.cpp -o lectureThird
 	./lectureThird
 
 # ==============================
@@ -34,6 +34,7 @@ lectureThird:
 # ==============================
 
 hello:
+	@echo "==============================================="
 	@echo " |  ____|_   _|__ \ / _ \__ \                  "
 	@echo " | |__    | |    ) | | | | ) |                 "
 	@echo " |  __|   | |   / /| | | |/ /                  "
@@ -49,6 +50,7 @@ hello:
 	@echo " |  ___/ _ \/ __| '_ \ / _ \ '_ \| |/ / | '_ \ "
 	@echo " | |  |  __/ (__| | | |  __/ | | |   <| | | | |"
 	@echo " |_|   \___|\___|_| |_|\___|_| |_|_|\_\_|_| |_|"
+	@echo "==============================================="
 	sleep 3
 
 
