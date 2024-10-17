@@ -1,8 +1,6 @@
 #ifndef BINARY_SEARCH_H
 #define BINARY_SEARCH_H
 
-#include <algorithm>
-
 int binarySearch(int arr[], size_t size, int target) {
   int comparisons = 0;
   int left = 0;

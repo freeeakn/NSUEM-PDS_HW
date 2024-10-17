@@ -18,11 +18,11 @@ all: hello lint lectureOne lectureSecond lectureThird clean
 	@echo "GoodBye..."
 
 lectureOne:
-	$(CC) $(FLAGS) src/lecture_1/main.cpp -o lectureOne
+	$(CC) $(FLAGS) src/cpp/lecture_1/main.cpp -o lectureOne
 	./lectureOne
 
 lectureSecond:
-	$(CC) $(FLAGS) src/lecture_2/main.cpp -o lectureSecond
+	$(CC) $(FLAGS) src/cpp/lecture_2/main.cpp -o lectureSecond
 	./lectureSecond
 
 lectureThird:
@@ -54,8 +54,8 @@ hello:
 
 lint:
 	@echo "starts linting..."
-	$(FORMAT) src/**/*.h
-	$(FORMAT) src/**/*.cpp
+	$(FORMAT) src/cpp/**/*.h
+	$(FORMAT) src/cpp/**/*.cpp
 	@echo "all..."
 
 clean:

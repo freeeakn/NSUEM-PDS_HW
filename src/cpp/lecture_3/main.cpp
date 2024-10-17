@@ -13,7 +13,6 @@ template <typename Func> double measureTime(Func func) {
          1000000.0;
 }
 
-// Алгоритмы проверки числа на простоту
 bool isPrime1(int n) {
   for (int i = 2; i <= n; i++) {
     if (n % i == 0)
