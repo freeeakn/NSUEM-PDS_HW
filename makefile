@@ -31,7 +31,7 @@ lectureThird:
 	./lectureThird
 
 lectureFourth:
-	cd $(PATHGO)lectureFourth/RecursiveFunc; go test ; cd ../RecursiveFromTwoArgs; go test; cd .. ; go run .
+	cd $(PATHGO)lectureFourth ; go mod init lectureFourth ; cd RecursiveFunc; go test ; cd ../RecursiveFromTwoArgs; go test; cd .. ; go run .
 
 # ==============================
 # UTILS
