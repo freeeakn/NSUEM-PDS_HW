@@ -4,6 +4,8 @@
 
 ## Lecture 1
 
+![lecture_1](https://skillicons.dev/icons?i=cpp)
+
 ### Project Description
 
 This repository contains the implementation of abstract data structures in C++: stack, queue, list, and set. All data structures are implemented using arrays and support basic operations.
@@ -47,6 +49,8 @@ The set is implemented using an array with element marking. Basic operations:
 
 ## Lecture 2
 
+![lecture_2](https://skillicons.dev/icons?i=cpp)
+
 * `linear_search.h`: implementation of linear search in an array.
 * `binary_search.h`: implementation of binary search in an array.
 * `search_comparison.h`: implementation of search algorithm comparison.
@@ -59,11 +63,15 @@ The set is implemented using an array with element marking. Basic operations:
 
 ## Lecture 3
 
+![lecture_3](https://skillicons.dev/icons?i=cpp)
+
 * **Performance Measurement and Visualization**
 
 This section of the code is designed to measure the performance of various algorithms for checking if a number is prime and for computing the greatest common divisor (GCD). The results are then visualized using colored backgrounds to indicate the relative performance of each algorithm.
 
 ## lecture 4
+
+![lecture_4](https://skillicons.dev/icons?i=go)
 
 * **Recursive Functions**
 
@@ -107,7 +115,7 @@ Example usage of each data structure can be found in the `main.cpp` file.
 
 ## Author
 
-This program was developed by Arthur Pechenkin, a third-year student, as part of the "Programming of Discrete Structures" course, in C++.
+This program was developed by Arthur Pechenkin, a third-year student, as part of the "Programming of Discrete Structures" course, in C++ and Golang.
 
 Contact information:
 

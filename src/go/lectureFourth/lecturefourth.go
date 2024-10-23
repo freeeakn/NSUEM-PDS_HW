@@ -39,6 +39,7 @@ func main() {
 
 	fmt.Println()
 	fmt.Println("\033[1;34mTest timings for recursive functions:\033[0m")
+
 	maxNumber := 40
 
 	//! Рекурсивная функция без оптимизации
