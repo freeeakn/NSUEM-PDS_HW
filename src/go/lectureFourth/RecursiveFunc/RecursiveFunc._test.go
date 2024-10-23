@@ -193,3 +193,115 @@ func TestFactorialMaxInt(t *testing.T) {
 		t.Log("Factorial Max Int test passed")
 	}
 }
+
+func TestFibonacciMemoizedNegative(t *testing.T) {
+	result := FibonacciMemoized(-1, make(map[int]int))
+	expected := -1
+	if result != expected {
+		t.Errorf("FibonacciMemoized(-1) = %d; want %d", result, expected)
+	} else {
+		t.Log("FibonacciMemoized Negative test passed")
+	}
+}
+
+func TestFibonacciMemoizedThree(t *testing.T) {
+	memo := make(map[int]int)
+	result := FibonacciMemoized(3, memo)
+	expected := 2
+	if result != expected {
+		t.Errorf("FibonacciMemoized(3) = %d; want %d", result, expected)
+	} else {
+		t.Log("FibonacciMemoized Three test passed")
+	}
+}
+
+func TestFibonacciMemoizedFour(t *testing.T) {
+	memo := make(map[int]int)
+	result := FibonacciMemoized(4, memo)
+	expected := 3
+	if result != expected {
+		t.Errorf("FibonacciMemoized(4) = %d; want %d", result, expected)
+	} else {
+		t.Log("FibonacciMemoized Four test passed")
+	}
+}
+
+func TestFibonacciMemoizedTwenty(t *testing.T) {
+	result := FibonacciMemoized(20, make(map[int]int))
+	expected := 6765
+	if result != expected {
+		t.Errorf("FibonacciMemoized(20) = %d; want %d", result, expected)
+	} else {
+		t.Log("FibonacciMemoized Twenty test passed")
+	}
+}
+
+func TestFibonacciIterativeArrayNegative(t *testing.T) {
+	result := FibonacciIterativeArray(-1)
+	expected := -1
+	if result != expected {
+		t.Errorf("FibonacciIterativeArray(-1) = %d; want %d", result, expected)
+	} else {
+		t.Log("FibonacciIterativeArray Negative test passed")
+	}
+}
+
+func TestFibonacciIterativeArrayTwo(t *testing.T) {
+	result := FibonacciIterativeArray(2)
+	expected := 1
+	if result != expected {
+		t.Errorf("FibonacciIterativeArray(2) = %d; want %d", result, expected)
+	} else {
+		t.Log("FibonacciIterativeArray Two test passed")
+	}
+}
+
+func TestFibonacciIterativeArrayTen(t *testing.T) {
+	result := FibonacciIterativeArray(10)
+	expected := 55
+	if result != expected {
+		t.Errorf("FibonacciIterativeArray(10) = %d; want %d", result, expected)
+	} else {
+		t.Log("FibonacciIterativeArray Ten test passed")
+	}
+}
+
+func TestFibonacciIterativeArrayEleven(t *testing.T) {
+	result := FibonacciIterativeArray(11)
+	expected := 89
+	if result != expected {
+		t.Errorf("FibonacciIterativeArray(11) = %d; want %d", result, expected)
+	} else {
+		t.Log("FibonacciIterativeArray Eleven test passed")
+	}
+}
+
+func TestFibonacciIterativeOnTheFlyZero(t *testing.T) {
+	result := FibonacciIterativeOnTheFly(0)
+	expected := 0
+	if result != expected {
+		t.Errorf("FibonacciIterativeOnTheFly(0) = %d; want %d", result, expected)
+	} else {
+		t.Log("FibonacciIterativeOnTheFly Zero test passed")
+	}
+}
+
+func TestFibonacciIterativeOnTheFlyOne(t *testing.T) {
+	result := FibonacciIterativeOnTheFly(1)
+	expected := 1
+	if result != expected {
+		t.Errorf("FibonacciIterativeOnTheFly(1) = %d; want %d", result, expected)
+	} else {
+		t.Log("FibonacciIterativeOnTheFly One test passed")
+	}
+}
+
+func TestFibonacciIterativeOnTheFlyThirty(t *testing.T) {
+	result := FibonacciIterativeOnTheFly(30)
+	expected := 832040
+	if result != expected {
+		t.Errorf("FibonacciIterativeOnTheFly(30) = %d; want %d", result, expected)
+	} else {
+		t.Log("FibonacciIterativeOnTheFly Thirty test passed")
+	}
+}

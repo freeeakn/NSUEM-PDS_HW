@@ -15,7 +15,7 @@ FORMAT = clang-format -i
 FLAGS = -std=c++20 -Wall -Werror -Wextra
 PATHGO = src/go/
 
-all: hello lint lectureOne lectureSecond lectureThird clean
+all: hello lint lectureOne lectureSecond lectureThird lectureFourth clean
 	@echo "GoodBye..."
 
 lectureOne:
@@ -31,7 +31,7 @@ lectureThird:
 	./lectureThird
 
 lectureFourth:
-	cd $(PATHGO)lectureFourth ; go run .
+	cd $(PATHGO)lectureFourth/RecursiveFunc; go test ; cd ../RecursiveFromTwoArgs; go test; cd .. ; go run .
 
 # ==============================
 # UTILS
