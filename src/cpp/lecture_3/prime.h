@@ -1,6 +1,7 @@
 #ifndef PRIME_H
 #define PRIME_H
 #include <cmath>
+
 bool isPrime1(int n) {
   for (int i = 2; i <= n; i++) {
     if (n % i == 0)
@@ -32,4 +33,5 @@ bool isPrime4(int n) {
   }
   return true;
 }
+
 #endif // PRIME_H
