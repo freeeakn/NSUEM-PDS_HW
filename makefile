@@ -13,6 +13,7 @@ endif
 CC = g++
 FORMAT = clang-format -i
 FLAGS = -std=c++20 -Wall -Werror -Wextra
+PATHGO = src/go/
 
 all: hello lint lectureOne lectureSecond lectureThird clean
 	@echo "GoodBye..."
@@ -28,6 +29,9 @@ lectureSecond:
 lectureThird:
 	$(CC) $(FLAGS) src/cpp/lecture_3/main.cpp -o lectureThird
 	./lectureThird
+
+lectureFourth:
+	cd $(PATHGO)lectureFourth ; go run .
 
 # ==============================
 # UTILS
