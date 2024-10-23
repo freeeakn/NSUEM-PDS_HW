@@ -57,6 +57,35 @@ The set is implemented using an array with element marking. Basic operations:
 * **Linear Search**: this algorithm works by sequentially scanning the elements of the array and comparing each element with the target value. If the element is found, the algorithm returns the index of the element.
 * **Binary Search**: this algorithm works by dividing the array into two parts and comparing the middle element with the target value. If the middle element is equal to the target value, the algorithm returns the index of the element. If the middle element is less than the target value, the algorithm repeats for the right part of the array. If the middle element is greater than the target value, the algorithm repeats for the left part of the array.
 
+## Lecture 3
+
+* **Performance Measurement and Visualization**
+
+This section of the code is designed to measure the performance of various algorithms for checking if a number is prime and for computing the greatest common divisor (GCD). The results are then visualized using colored backgrounds to indicate the relative performance of each algorithm.
+
+## lecture 4
+
+* **Recursive Functions**
+
+This is a program that demonstrates the use of recursive functions in various scenarios. The program includes tests for different recursive functions, as well as timing tests to compare the performance of recursive and iterative functions.
+
+* **Recursive Functions**
+
+The program includes three packages with recursive functions:
+
+* `RecursiveFunc`: This package contains recursive functions for calculating the sum of digits of a number, the sum of numbers from 0 to a given number, the Fibonacci number at a given position, and the factorial of a number.
+* `RecursiveProc`: This package contains recursive procedures for printing numbers from 1 to a given number, from a given number to 1, and from -a given number to a given number.
+* `RecursiveFromTwoArgs`: This package contains recursive functions for calculating the Euclidean algorithm, the power of a number, and the factorial of a number.
+
+* **Timing Tests**
+
+The program includes timing tests to compare the performance of recursive and iterative functions. The tests measure the time it takes to calculate the Fibonacci number at a given position using different approaches:
+
+* `Fibonacci`: Recursive function without optimization
+* `FibonacciMemoized`: Recursive function with caching
+* `FibonacciIterativeArray`: Iterative function with a temporary array
+* `FibonacciIterativeOnTheFly`: Iterative function with on-the-fly calculation
+
 ## Installation
 
 1. Clone the repository:
@@ -90,4 +119,7 @@ This project is licensed under the MIT License. Please see the LICENSE file for 
 
 ---
 
-Note: Make sure you have a C++ compiler (e.g., g++) installed to compile and run the project.
+## Note
+
+* ***Make sure you have a C++ compiler (e.g., g++) installed to compile and run the project.***
+* ***Make sure you have a golang compiler (go) installed to run the project.***
