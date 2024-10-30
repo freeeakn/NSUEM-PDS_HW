@@ -8,7 +8,7 @@ private:
   int iterations1, iterations2, iterations3;
 
 public:
-  GCD() : iterations1(0), iterations2(0), iterations3(0){}
+  GCD() : iterations1(0), iterations2(0), iterations3(0) {}
 
   int gcd1(int m, int n) {
     this->iterations1 = 0;

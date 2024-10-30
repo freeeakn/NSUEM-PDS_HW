@@ -68,3 +68,5 @@ lint:
 clean:
 	@echo "Cleaning up..."
 	rm -rf $(FILENAME)
+	rm -rf $(PATHGO)/lectureFourth/table.txt
+	rm -rf $(PATHGO)/lectureFourth/lectureFourth_results.csv

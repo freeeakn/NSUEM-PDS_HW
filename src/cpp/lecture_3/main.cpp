@@ -84,9 +84,9 @@ int main() {
   std::cout << "\nАлгоритмы вычисления НОД:\n";
   std::cout << std::setw(5) << "M" << "\t" << std::setw(5) << "N" << "\t"
             << std::setw(10) << "gcd1" << "\t" << std::setw(10) << "gcd2"
-            << "\t" << std::setw(10) << "gcd3" << "\t" << std::setw(10) << "Итерации 1" << "\t"
-            << std::setw(10) << "Итерации 2" << "\t" << std::setw(10)
-            << "Итерации 3" << "\n";
+            << "\t" << std::setw(10) << "gcd3" << "\t" << std::setw(10)
+            << "Итерации 1" << "\t" << std::setw(10) << "Итерации 2" << "\t"
+            << std::setw(10) << "Итерации 3" << "\n";
 
   maxTime = 0;
   for (int m = 101; m <= 1000; m += 100) {
@@ -94,8 +94,7 @@ int main() {
       double time1 = measureTime([m, n, &gcd]() { gcd.gcd1(m, n); });
       double time2 = measureTime([m, n, &gcd]() { gcd.gcd2(m, n); });
       double time3 = measureTime([m, n, &gcd]() { gcd.gcd3(m, n); });
-      maxTime = std::max(
-          maxTime, std::max(time1, std::max(time2, time3)));
+      maxTime = std::max(maxTime, std::max(time1, std::max(time2, time3)));
     }
   }
 

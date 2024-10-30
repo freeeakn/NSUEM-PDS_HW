@@ -6,7 +6,7 @@ import (
 
 func TestSumDigitsNumber(t *testing.T) {
 	result := SumDigitsNumber(12345)
-	expected := 15
+	var expected uint64 = 15
 	if result != expected {
 		t.Errorf("SumDigitsNumber(12345) = %d; want %d", result, expected)
 	} else {
@@ -16,7 +16,7 @@ func TestSumDigitsNumber(t *testing.T) {
 
 func TestSumDigitsNumberAllNines(t *testing.T) {
 	result := SumDigitsNumber(99999)
-	expected := 45
+	var expected uint64 = 45
 	if result != expected {
 		t.Errorf("SumDigitsNumber(99999) = %d; want %d", result, expected)
 	} else {
@@ -26,7 +26,7 @@ func TestSumDigitsNumberAllNines(t *testing.T) {
 
 func TestSumDigitsNumberAlternatingDigits(t *testing.T) {
 	result := SumDigitsNumber(121212)
-	expected := 9
+	var expected uint64 = 9
 	if result != expected {
 		t.Errorf("SumDigitsNumber(121212) = %d; want %d", result, expected)
 	} else {
@@ -36,7 +36,7 @@ func TestSumDigitsNumberAlternatingDigits(t *testing.T) {
 
 func TestSumDigitsNumberSmallestPositiveInt(t *testing.T) {
 	result := SumDigitsNumber(1)
-	expected := 1
+	var expected uint64 = 1
 	if result != expected {
 		t.Errorf("SumDigitsNumber(1) = %d; want %d", result, expected)
 	} else {
@@ -46,7 +46,7 @@ func TestSumDigitsNumberSmallestPositiveInt(t *testing.T) {
 
 func TestSumDigitsNumberMixedZeros(t *testing.T) {
 	result := SumDigitsNumber(10203040)
-	expected := 10
+	var expected uint64 = 10
 	if result != expected {
 		t.Errorf("SumDigitsNumber(10203040) = %d; want %d", result, expected)
 	} else {
@@ -56,7 +56,7 @@ func TestSumDigitsNumberMixedZeros(t *testing.T) {
 
 func TestSumFromZeroToNumberZero(t *testing.T) {
 	result := SumFromZeroToNumber(0)
-	expected := 0
+	var expected uint64 = 0
 	if result != expected {
 		t.Errorf("SumFromZeroToNumber(0) = %d; want %d", result, expected)
 	} else {
@@ -66,7 +66,7 @@ func TestSumFromZeroToNumberZero(t *testing.T) {
 
 func TestSumFromZeroToNumberPositive(t *testing.T) {
 	result := SumFromZeroToNumber(5)
-	expected := 15
+	var expected uint64 = 15
 	if result != expected {
 		t.Errorf("SumFromZeroToNumber(5) = %d; want %d", result, expected)
 	} else {
@@ -76,7 +76,7 @@ func TestSumFromZeroToNumberPositive(t *testing.T) {
 
 func TestSumFromZeroToNumberLargePositive(t *testing.T) {
 	result := SumFromZeroToNumber(1000)
-	expected := 500500
+	var expected uint64 = 500500
 	if result != expected {
 		t.Errorf("SumFromZeroToNumber(1000) = %d; want %d", result, expected)
 	} else {
@@ -86,7 +86,7 @@ func TestSumFromZeroToNumberLargePositive(t *testing.T) {
 
 func TestSumFromZeroToNumberLargePositiveInteger(t *testing.T) {
 	result := SumFromZeroToNumber(10000)
-	expected := 50005000
+	var expected uint64 = 50005000
 	if result != expected {
 		t.Errorf("SumFromZeroToNumber(10000) = %d; want %d", result, expected)
 	} else {
@@ -96,7 +96,7 @@ func TestSumFromZeroToNumberLargePositiveInteger(t *testing.T) {
 
 func TestSumFromZeroToNumberMaxInt(t *testing.T) {
 	result := SumFromZeroToNumber(1000000)
-	expected := 500000500000
+	var expected uint64 = 500000500000
 	if result != expected {
 		t.Errorf("SumFromZeroToNumber(1000000) = %d; want %d", result, expected)
 	} else {
@@ -106,7 +106,7 @@ func TestSumFromZeroToNumberMaxInt(t *testing.T) {
 
 func TestSumFromZeroToNumberMinInt(t *testing.T) {
 	result := SumFromZeroToNumber(0)
-	expected := 0
+	var expected uint64 = 0
 	if result != expected {
 		t.Errorf("SumFromZeroToNumber(0) = %d; want %d", result, expected)
 	} else {
@@ -116,7 +116,7 @@ func TestSumFromZeroToNumberMinInt(t *testing.T) {
 
 func TestFibonacciLargePositiveInteger(t *testing.T) {
 	result := Fibonacci(30)
-	expected := 832040
+	var expected uint64 = 832040
 	if result != expected {
 		t.Errorf("Fibonacci(30) = %d; want %d", result, expected)
 	} else {
@@ -126,7 +126,7 @@ func TestFibonacciLargePositiveInteger(t *testing.T) {
 
 func TestFibonacciZero(t *testing.T) {
 	result := Fibonacci(0)
-	expected := 0
+	var expected uint64 = 0
 	if result != expected {
 		t.Errorf("Fibonacci(0) = %d; want %d", result, expected)
 	} else {
@@ -136,7 +136,7 @@ func TestFibonacciZero(t *testing.T) {
 
 func TestFibonacciOne(t *testing.T) {
 	result := Fibonacci(1)
-	expected := 1
+	var expected uint64 = 1
 	if result != expected {
 		t.Errorf("Fibonacci(1) = %d; want %d", result, expected)
 	} else {
@@ -146,7 +146,7 @@ func TestFibonacciOne(t *testing.T) {
 
 func TestFibonacciTwo(t *testing.T) {
 	result := Fibonacci(2)
-	expected := 1
+	var expected uint64 = 1
 	if result != expected {
 		t.Errorf("Fibonacci(2) = %d; want %d", result, expected)
 	} else {
@@ -156,7 +156,7 @@ func TestFibonacciTwo(t *testing.T) {
 
 func TestFactorialZero(t *testing.T) {
 	result := Factorial(0)
-	expected := 1
+	expected := uint64(1)
 	if result != expected {
 		t.Errorf("Factorial(0) = %d; want %d", result, expected)
 	} else {
@@ -166,7 +166,7 @@ func TestFactorialZero(t *testing.T) {
 
 func TestFactorialOne(t *testing.T) {
 	result := Factorial(1)
-	expected := 1
+	expected := uint64(1)
 	if result != expected {
 		t.Errorf("Factorial(1) = %d; want %d", result, expected)
 	} else {
@@ -176,7 +176,7 @@ func TestFactorialOne(t *testing.T) {
 
 func TestFactorialLargePositiveInteger(t *testing.T) {
 	result := Factorial(10)
-	expected := 3628800
+	expected := uint64(3628800)
 	if result != expected {
 		t.Errorf("Factorial(10) = %d; want %d", result, expected)
 	} else {
@@ -186,7 +186,7 @@ func TestFactorialLargePositiveInteger(t *testing.T) {
 
 func TestFactorialMaxInt(t *testing.T) {
 	result := Factorial(20)
-	expected := 2432902008176640000
+	expected := uint64(2432902008176640000)
 	if result != expected {
 		t.Errorf("Factorial(20) = %d; want %d", result, expected)
 	} else {

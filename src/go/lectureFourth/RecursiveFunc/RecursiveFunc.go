@@ -1,27 +1,27 @@
 package RecursiveFunc
 
-func SumDigitsNumber(number int) int {
+func SumDigitsNumber(number uint64) uint64 {
 	if number == 0 {
 		return 0
 	}
 	return number%10 + SumDigitsNumber(number/10)
 }
 
-func SumFromZeroToNumber(number int) int {
+func SumFromZeroToNumber(number uint64) uint64 {
 	if number == 0 {
 		return 0
 	}
 	return number + SumFromZeroToNumber(number-1)
 }
 
-func Fibonacci(number int) int {
+func Fibonacci(number uint64) uint64 {
 	if number <= 1 {
 		return number
 	}
 	return Fibonacci(number-1) + Fibonacci(number-2)
 }
 
-func Factorial(number int) int {
+func Factorial(number uint64) uint64 {
 	if number == 0 || number == 1 {
 		return 1
 	}
