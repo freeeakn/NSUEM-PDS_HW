@@ -4,7 +4,6 @@
 
 int gcd1(int m, int n) {
   int max = std::max(m, n);
-  // int min = std::min(m, n);
   int *divisors = new int[max];
   int count = 0;
   for (int i = 1; i <= max; i++) {
