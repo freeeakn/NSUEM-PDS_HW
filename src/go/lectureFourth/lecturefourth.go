@@ -8,6 +8,7 @@ import (
 	"time"
 )
 
+// TODO Добавить проверку в цикле
 func main() {
 	fmt.Println("\033[1;34mStarting tests with RecursiveFunc package:\033[0m")
 	fmt.Printf("Sum of digits: %d\n", RecursiveFunc.SumDigitsNumber(12345))
