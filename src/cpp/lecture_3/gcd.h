@@ -1,6 +1,7 @@
 #ifndef GCD_H
 #define GCD_H
 #include <algorithm>
+
 int gcd1(int m, int n) {
   int max = std::max(m, n);
   // int min = std::min(m, n);
