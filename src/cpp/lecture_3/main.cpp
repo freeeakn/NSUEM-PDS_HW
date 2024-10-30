@@ -30,26 +30,32 @@ void setBackgroundColor(double value, double max) {
 void resetBackgroundColor() { std::cout << "\033[0m"; }
 
 int main() {
+  Prime prime;
+  GCD gcd;
+
   std::cout << "Алгоритмы проверки числа на простоту:\n";
   std::cout << std::setw(5) << "N" << "\t" << std::setw(10) << "isPrime1"
             << "\t" << std::setw(10) << "isPrime2" << "\t" << std::setw(10)
-            << "isPrime3" << "\t" << std::setw(10) << "isPrime4" << "\n";
+            << "isPrime3" << "\t" << std::setw(10) << "isPrime4" << "\t"
+            << std::setw(10) << "Итерации 1" << "\t" << std::setw(10)
+            << "Итерации 2" << "\t" << std::setw(10) << "Итерации 3" << "\t"
+            << std::setw(10) << "Итерации 4" << "\n";
 
   double maxTime = 0;
-  for (int n = 100; n <= 10000; n += 500) {
-    double time1 = measureTime([n]() { isPrime1(n); });
-    double time2 = measureTime([n]() { isPrime2(n); });
-    double time3 = measureTime([n]() { isPrime3(n); });
-    double time4 = measureTime([n]() { isPrime4(n); });
+  for (int n = 101; n <= 15000; n += 500) {
+    double time1 = measureTime([n, &prime]() { prime.isPrime1(n); });
+    double time2 = measureTime([n, &prime]() { prime.isPrime2(n); });
+    double time3 = measureTime([n, &prime]() { prime.isPrime3(n); });
+    double time4 = measureTime([n, &prime]() { prime.isPrime4(n); });
     maxTime = std::max(
         maxTime, std::max(time1, std::max(time2, std::max(time3, time4))));
   }
 
-  for (int n = 100; n <= 10000; n += 500) {
-    double time1 = measureTime([n]() { isPrime1(n); });
-    double time2 = measureTime([n]() { isPrime2(n); });
-    double time3 = measureTime([n]() { isPrime3(n); });
-    double time4 = measureTime([n]() { isPrime4(n); });
+  for (int n = 101; n <= 15000; n += 500) {
+    double time1 = measureTime([n, &prime]() { prime.isPrime1(n); });
+    double time2 = measureTime([n, &prime]() { prime.isPrime2(n); });
+    double time3 = measureTime([n, &prime]() { prime.isPrime3(n); });
+    double time4 = measureTime([n, &prime]() { prime.isPrime4(n); });
 
     std::cout << std::setw(5) << n << "\t";
     setBackgroundColor(time1, maxTime);
@@ -67,33 +73,37 @@ int main() {
     setBackgroundColor(time4, maxTime);
     std::cout << std::fixed << std::setprecision(6) << std::setw(10) << time4;
     resetBackgroundColor();
+    std::cout << "\t";
+    std::cout << std::setw(10) << prime.getIterations1() << "\t";
+    std::cout << std::setw(10) << prime.getIterations2() << "\t";
+    std::cout << std::setw(10) << prime.getIterations3() << "\t";
+    std::cout << std::setw(10) << prime.getIterations4() << "\t";
     std::cout << "\n";
   }
 
   std::cout << "\nАлгоритмы вычисления НОД:\n";
   std::cout << std::setw(5) << "M" << "\t" << std::setw(5) << "N" << "\t"
             << std::setw(10) << "gcd1" << "\t" << std::setw(10) << "gcd2"
-            << "\t" << std::setw(10) << "gcd3" << "\t" << std::setw(10)
-            << "gcd4" << "\n";
+            << "\t" << std::setw(10) << "gcd3" << "\t" << std::setw(10) << "Итерации 1" << "\t"
+            << std::setw(10) << "Итерации 2" << "\t" << std::setw(10)
+            << "Итерации 3" << "\n";
 
   maxTime = 0;
-  for (int m = 100; m <= 10000; m += 500) {
-    for (int n = 100; n <= 10000; n += 500) {
-      double time1 = measureTime([m, n]() { gcd1(m, n); });
-      double time2 = measureTime([m, n]() { gcd2(m, n); });
-      double time3 = measureTime([m, n]() { gcd3(m, n); });
-      double time4 = measureTime([m, n]() { gcd4(m, n); });
+  for (int m = 101; m <= 1000; m += 100) {
+    for (int n = 123; n <= 1000; n += 132) {
+      double time1 = measureTime([m, n, &gcd]() { gcd.gcd1(m, n); });
+      double time2 = measureTime([m, n, &gcd]() { gcd.gcd2(m, n); });
+      double time3 = measureTime([m, n, &gcd]() { gcd.gcd3(m, n); });
       maxTime = std::max(
-          maxTime, std::max(time1, std::max(time2, std::max(time3, time4))));
+          maxTime, std::max(time1, std::max(time2, time3)));
     }
   }
 
-  for (int m = 100; m <= 10000; m += 500) {
-    for (int n = 100; n <= 10000; n += 500) {
-      double time1 = measureTime([m, n]() { gcd1(m, n); });
-      double time2 = measureTime([m, n]() { gcd2(m, n); });
-      double time3 = measureTime([m, n]() { gcd3(m, n); });
-      double time4 = measureTime([m, n]() { gcd4(m, n); });
+  for (int m = 101; m <= 1000; m += 100) {
+    for (int n = 123; n <= 1000; n += 132) {
+      double time1 = measureTime([m, n, &gcd]() { gcd.gcd1(m, n); });
+      double time2 = measureTime([m, n, &gcd]() { gcd.gcd2(m, n); });
+      double time3 = measureTime([m, n, &gcd]() { gcd.gcd3(m, n); });
 
       std::cout << std::setw(5) << m << "\t" << std::setw(5) << n << "\t";
       setBackgroundColor(time1, maxTime);
@@ -108,9 +118,9 @@ int main() {
       std::cout << std::fixed << std::setprecision(6) << std::setw(10) << time3;
       resetBackgroundColor();
       std::cout << "\t";
-      setBackgroundColor(time4, maxTime);
-      std::cout << std::fixed << std::setprecision(6) << std::setw(10) << time4;
-      resetBackgroundColor();
+      std::cout << std::setw(10) << gcd.getIterations1() << "\t";
+      std::cout << std::setw(10) << gcd.getIterations2() << "\t";
+      std::cout << std::setw(10) << gcd.getIterations3() << "\t";
       std::cout << "\n";
     }
   }
