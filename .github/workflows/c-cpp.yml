@@ -13,5 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: make
-      run: make
+    - name: make lint
+      run: make lint
+    - name: make lectureSecond
+      run: make lectureSecond
+    - name: make lectureThird
+      run: make lectureThird
