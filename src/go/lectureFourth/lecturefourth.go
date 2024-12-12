@@ -8,7 +8,6 @@ import (
 	"log"
 	"os"
 	"time"
-
 	"github.com/olekukonko/tablewriter"
 )
 
