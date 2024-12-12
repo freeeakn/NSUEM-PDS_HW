@@ -25,6 +25,8 @@ func (g *Graph) AddVertex(vertex int) {
 func (g *Graph) AddEdge(from, to int) {
   g.Vertices[from] = append(g.Vertices[from], to)
   g.AdjacencyList[from].PushBack(to)
+  g.Vertices[to] = append(g.Vertices[to], from)
+  g.AdjacencyList[to].PushBack(from)
 }
 
 func (g *Graph) DisplayGraph() {
@@ -40,6 +42,7 @@ func (g *Graph) DisplayGraph() {
   fmt.Println()
 }
 
+// Поиск в ширину
 func (g *Graph) BreadthFirstSearch(startVertex int) {
 	visited := make(map[int]bool)
   queue := list.New()
@@ -68,6 +71,7 @@ func (g *Graph) BreadthFirstSearch(startVertex int) {
 	fmt.Println("Remaining edges:", len(g.AdjacencyList) - len(visited))
 }
 
+// Поиск в глубину
 func (g *Graph) DepthFirstSearch(startVertex int) {
   visited := make(map[int]bool)
   result := make([]int, 0)
